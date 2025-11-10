@@ -13,6 +13,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Brenat Demo', sans-serif;
   font-weight: 700;
+  color: var(--secondary-color);
 }
 h2 {
   font-size: 2.5rem;
@@ -135,7 +136,7 @@ header nav {
 #about {
   background-color: var(--secondary-color);
   color: var(--white-color);
-  padding: 8rem 2rem 2rem;
+  padding: 8rem 2rem 8rem;
 }
 #about .about-image {
   max-width: 300px;
@@ -159,8 +160,58 @@ header nav {
   line-height: 1;
   transform: rotate(-25deg);
 }
-
 #about h2 {
   margin-top: 4rem;
   margin-bottom: 1rem;
+  color: var(--white-color);
+}
+
+#election-day {
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  margin: -5rem 2rem 2rem;
+  box-shadow: #00000029 0 3px 6px;
+}
+#election-day::before {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  background: 
+  repeating-linear-gradient(to right, var(--primary-color) 0 14px, transparent 14px 28px) top/100% 4px repeat-x,
+  repeating-linear-gradient(to right, var(--primary-color) 0 14px, transparent 14px 28px) bottom/100% 4px repeat-x,
+  repeating-linear-gradient(to bottom, var(--primary-color) 0 14px, transparent 14px 28px) left/4px 100% repeat-y,
+  repeating-linear-gradient(to bottom, var(--primary-color) 0 14px, transparent 14px 28px) right/4px 100% repeat-y;
+}
+#election-day h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+#election-day ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+#election-day li {
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  text-align: center;
+}
+#election-day li::before {
+  display: none;
+}
+#election-day li svg {
+  width: 1em;
+  height: 1em;
+  margin-right: .5em;
+  vertical-align: middle;
+  fill: var(--secondary-color);
+  stroke: var(--secondary-color);
+  stroke-width: 1.5;
 }
