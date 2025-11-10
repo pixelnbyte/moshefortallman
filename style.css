@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Brenat Demo', sans-serif;
   font-weight: 700;
 }
+h2 {
+  font-size: 2.5rem;
+}
 
 img {
   max-width: 100%;
@@ -26,6 +29,22 @@ input {
   box-sizing: border-box;
   font-size: 1rem;
   border: 1px solid var(--secondary-color);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 1rem;
+  display: flex;
+}
+ul li::before {
+  content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='15.143'%20height='14.328'%20viewBox='0%200%2015.143%2014.328'%3E%3Cpath%20d='M11.75,7.5,6,13.25,11.75,19M6,13.25H19.143'%20transform='translate(20.143 20.414) rotate(180)'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3E%3C/svg%3E");
+  display: inline-block;
+  width: 1em;
+  margin-right: .5em;
 }
 
 header {
@@ -111,4 +130,37 @@ header nav {
   cursor: pointer;
   display: block;
   margin: 1rem auto -2.5rem;
+}
+
+#about {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 8rem 2rem 2rem;
+}
+#about .about-image {
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+#about .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#about .about-image p {
+  font-family: "professor", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  max-width: 7em;
+  line-height: 1;
+  transform: rotate(-25deg);
+}
+
+#about h2 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
