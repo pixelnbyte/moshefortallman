@@ -235,3 +235,53 @@ header nav {
   text-align: center;
   color: var(--secondary-color);
 }
+
+#faqs {
+  padding: 0 2rem 2rem;
+  position: relative;
+}
+#faqs h2 {
+  margin: 0;
+  text-align: center;
+}
+#faqs ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#faqs li {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 1rem;
+  display: block;
+  margin-bottom: 3px;
+}
+#faqs li::before {
+  display: none;
+}
+#faqs li h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--white-color);
+  font-family: montserrat, sans-serif;
+  font-weight: 600;
+}
+#faqs li p {
+  font-size: 1rem;
+  overflow: hidden;
+  margin: 0;
+  max-height: 0;
+  transition: .5s;
+}
+#faqs li.active p {
+  max-height: 500px;
+  margin-top: 1rem;
+}
+#faqs .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150%;
+  max-width: none;
+  z-index: -1;
+}
