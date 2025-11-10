@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUvlO6tzA1z961W-2_-7EEZ1Icd6ZtcSg&libraries=places"></script>
-    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>  
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Moshe for Tallman Fire District</title>
 </head>
 <body>
   <header>
     <div class="logo-wrapper">
-      <img src="logo.png" alt="Moshe for Tallman Fire District">
+      <img src="img/logo.png" alt="Moshe for Tallman Fire District">
     </div>
     <nav>
       <ul>
@@ -21,20 +25,23 @@
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <h1>When disaster strikes, <span>every second</span>counts.</span></h1>
-      <h1>On <a href="#">December 9,</a> make your <span>vote count!</span></h1>
-      <div class="search-bar">
-        <label>Check if you're located in Tallman</label>
-        <div class="autocomplete-container">
-          <input type="text" id="address" placeholder="Start typing your address">
+    <section id="hero">
+      <video src="img/video.mp4" autoplay muted loop></video>
+      <div class="hero-content">
+        <h1>When disaster strikes, <br><span>every second</span> counts.</span></h1>
+        <h1>On <a href="#">December 9,</a> make your <span>vote count!</span></h1>
+        <div class="search-bar">
+          <label>Check if you're located in Tallman</label>
+          <div class="autocomplete-container">
+            <input type="text" id="address" placeholder="Start typing your address">
+          </div>
+          <button onclick="handleSubmit()">Search</button>
         </div>
-        <button onclick="handleSubmit()">Search</button>
       </div>
     </section>
-    <section class="about">
+    <section id="about">
       <div class="about-image">
-        <img src="about-image.png" alt="Moshe for Tallman Fire District">
+        <img src="img/moshe.png" alt="Moshe for Tallman Fire District">
       </div>
       <div class="about-content">
         <p>My name is Moshe Engel, and I’m stepping forward because this community deserves leadership that listens, engages, and delivers.</p>
@@ -49,7 +56,7 @@
         </ul>
       </div>
     </section>
-    <section class="election-day">
+    <section id="election-day">
       <h2>Election Day Information</h2>
       <ul>
         <li>December 9, 2025</li>
@@ -57,14 +64,14 @@
         <li>287 NY 59 <br>Tallman, NY</li>
       </ul>
     </section>
-    <section class="mission">
+    <section id="mission">
       <h2>8</h2>
       <h3>Minutes</h3>
       <p>Is the time it takes a small kitchen fire to spread to a full structure fire causing lasting damage and endangering lives. </p>
       <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble. Sadly our fire department is plagued by long response times, low volunteer rates and overall poor performance. We need YOUR vote to help enact change.</p>
   
     </section>
-    <section class="faqs">
+    <section id="faqs">
       <h2>FAQs</h2>
       <ul>
         <li>
@@ -101,10 +108,10 @@
         </li>
       </ul>
     </section>
-    <section class="map">
+    <section id="map">
 
     </section>
-    <section class="contact">
+    <section id="contact">
       <h2>Questions? Commnets? or Just because.</h2>
       <a href="#">moshefortallmanfd@gmail.com</a>
     </section>
