@@ -136,7 +136,7 @@ header nav {
 #about {
   background-color: var(--secondary-color);
   color: var(--white-color);
-  padding: 8rem 2rem 8rem;
+  padding: 8rem 2rem 14rem;
 }
 #about .about-image {
   max-width: 300px;
@@ -170,7 +170,7 @@ header nav {
   position: relative;
   background: #fff;
   padding: 2rem;
-  margin: -5rem 2rem 2rem;
+  margin: -10rem 2rem 2rem;
   box-shadow: #00000029 0 3px 6px;
 }
 #election-day::before {
@@ -214,4 +214,24 @@ header nav {
   fill: var(--secondary-color);
   stroke: var(--secondary-color);
   stroke-width: 1.5;
+}
+
+#mission {
+  padding: 8rem 2rem;
+}
+#mission h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 12rem;
+  color: var(--primary-color);
+  line-height: 9rem;
+}
+#mission h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+#mission p {
+  text-align: center;
+  color: var(--secondary-color);
 }
