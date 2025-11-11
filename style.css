@@ -208,8 +208,19 @@ header nav {
   align-items: center;
   gap: .5rem;
   text-align: center;
+  flex-grow: 1;
+  min-width: calc(50% - 17px);
 }
 #election-day li::before {
+  display: none;
+}
+#election-day li.bar {
+  width: 1px;
+  background: var(--secondary-color);
+  flex-grow: 0;
+  min-width: 0;
+}
+#election-day li.bar:nth-child(4) {
   display: none;
 }
 #election-day li svg {
@@ -334,6 +345,11 @@ header nav {
 	width: 100%;
 }
 
+@media (max-width: 360px) {
+  #election-day li.bar {
+    display: none;
+  }
+}
 
 @media (min-width: 768px) {
   .mobile-only {
@@ -441,6 +457,12 @@ header nav {
   #election-day {
     max-width: 80%;
     margin: -6rem auto 4rem;
+  }
+  #election-day li {
+    min-width: 0;
+  }
+  #election-day li.bar:nth-child(4) {
+    display: block;
   }
 
   #mission {
