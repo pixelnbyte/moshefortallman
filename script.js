@@ -175,3 +175,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+// Counter
+const counter = document.querySelector('.counter');
+const target = +counter.dataset.target;
+let started = false;
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !started) {
+      started = true;
+      let count = 0;
+      const duration = 800;
+      const increment = target / (duration / 16);
+      const step = () => {
+        count += increment;
+        if (count < target) {
+          counter.textContent = Math.floor(count);
+          requestAnimationFrame(step);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      step();
+    }
+  });
+});
+
+observer.observe(counter);

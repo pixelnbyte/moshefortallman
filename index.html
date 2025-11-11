@@ -14,14 +14,24 @@
 </head>
 <body>
   <header>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </nav>
     <div class="logo-wrapper">
       <img src="img/logo.png" alt="Moshe for Tallman Fire District">
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="mobile-only"><a href="#hero">Home</a></li>
+        <li class="mobile-only"><a href="#about">About</a></li>
+        <li class="mobile-only"><a href="#faqs">FAQs</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -30,7 +40,7 @@
       <video src="img/video.mp4" autoplay muted loop></video>
       <div class="hero-content">
         <h1>When disaster strikes, <br><span>every second</span> counts.</span></h1>
-        <h1>On <a href="#">December 9,</a> make your <span>vote count!</span></h1>
+        <h1>On <a href="#">December 9,</a> <br>make your <span>vote count!</span></h1>
         <div class="search-bar">
           <label>Check if you're located in Tallman</label>
           <div class="autocomplete-container">
@@ -41,23 +51,25 @@
       </div>
     </section>
     <section id="about">
-      <div class="about-image">
-        <img src="img/moshe.png" alt="Moshe for Tallman Fire District">
-        <p>Here to serve,
-          Moshe Engel</p>
-      </div>
-      <div class="about-content">
-        <h2>Why I'm Running</h2>
-        <p>My name is Moshe Engel, and I’m stepping forward because this community deserves leadership that listens, engages, and delivers.</p>
-        <ul>
-          <li>
-            I’m a hard-working guy who shows up consistently.
-          </li>
-          <li>I’ve been attending Tallman Fire District meetings for months, learning, listening, and preparing to make real improvements.
-          </li>
-          <li>I’ve been serving in Monsey Fire Communications, giving me firsthand insight into the operational issues within the department.</li>
-          <li>I understand the problems and I have a plan to fix them.</li>
-        </ul>
+      <div class="wrapper">
+        <div class="about-image">
+          <img src="img/moshe.png" alt="Moshe for Tallman Fire District">
+          <p>Here to serve,
+            Moshe Engel</p>
+        </div>
+        <div class="about-content">
+          <h2>Why I'm Running</h2>
+          <p>My name is Moshe Engel, and I’m stepping forward because this community deserves leadership that listens, engages, and delivers.</p>
+          <ul>
+            <li>
+              I’m a hard-working guy who shows up consistently.
+            </li>
+            <li>I’ve been attending Tallman Fire District meetings for months, learning, listening, and preparing to make real improvements.
+            </li>
+            <li>I’ve been serving in Monsey Fire Communications, giving me firsthand insight into the operational issues within the department.</li>
+            <li>I understand the problems and I have a plan to fix them.</li>
+          </ul>
+        </div>
       </div>
     </section>
     <section id="election-day">
@@ -81,48 +93,55 @@
       </ul>
     </section>
     <section id="mission">
-      <h2>8</h2>
-      <h3>Minutes</h3>
-      <p>Is the time it takes a small kitchen fire to spread to a full structure fire causing lasting damage and endangering lives. </p>
-      <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble. Sadly our fire department is plagued by long response times, low volunteer rates and overall poor performance. We need <strong>YOUR</strong> vote to help enact change.</p>
-  
+      <div>
+        <h2 class="counter" data-target="8">8</h2>
+        <h3>Minutes</h3>
+      </div>
+      <div>
+        <p>Is the time it takes a small kitchen fire to spread to a full structure fire causing lasting damage and endangering lives. </p>
+        <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble. Sadly our fire department is plagued by long response times, low volunteer rates and overall poor performance. We need <strong>YOUR</strong> vote to help enact change.</p>
+      </div>
     </section>
     <section id="faqs">
       <h2>FAQs</h2>
-      <ul>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-        <li>
-          <h3>What is a fire commissioner?</h3>
-          <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
-        </li>
-      </ul>
+      <div class="faq-wrapper">
+        <ul>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+          <li>
+            <h3>What is a fire commissioner?</h3>
+            <p>The current response time is approximately 12+ minutes and that is when a crew is able to assemble.</p>
+          </li>
+        </ul>
+      </div>
       <img src="img/icon.png" alt="Moshe for Tallman Fire District" class="icon">
     </section>
     <section id="map">
@@ -130,7 +149,7 @@
     </section>
     <section id="contact">
       <h2>Questions? Commnets? or Just because.</h2>
-      <a href="#">moshefortallmanfd@gmail.com</a>
+      <a href="#" data-letters="moshefortallmanfd@gmail.com">moshefortallmanfd@gmail.com</a>
     </section>
     
   <script src="script.js"></script>

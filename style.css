@@ -1,4 +1,8 @@
 /* Stylesheet for Moshe for Tallman Fire District */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -139,7 +143,7 @@ header nav {
   padding: 8rem 2rem 14rem;
 }
 #about .about-image {
-  max-width: 300px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -172,14 +176,16 @@ header nav {
   padding: 2rem;
   margin: -10rem 2rem 2rem;
   box-shadow: #00000029 0 3px 6px;
+  z-index: 1;
 }
 #election-day::before {
   content: '';
   position: absolute;
-  top: -5%;
-  left: -5%;
-  width: 110%;
-  height: 110%;
+  top: -1rem;
+  left: -1rem;
+  width: calc(100% + 2rem);
+  height: calc(100% + 2rem);
+  z-index: -1;
   background: 
   repeating-linear-gradient(to right, var(--primary-color) 0 14px, transparent 14px 28px) top/100% 4px repeat-x,
   repeating-linear-gradient(to right, var(--primary-color) 0 14px, transparent 14px 28px) bottom/100% 4px repeat-x,
@@ -217,7 +223,7 @@ header nav {
 }
 
 #mission {
-  padding: 8rem 2rem;
+  padding: 4rem 2rem 5rem;
 }
 #mission h2 {
   margin: 0;
@@ -281,7 +287,8 @@ header nav {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 150%;
+  width: auto;
+  height: 160%;
   max-width: none;
   z-index: -1;
 }
@@ -303,4 +310,196 @@ header nav {
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 600;
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 1.25rem;
+	display: inline-block;
+	overflow: hidden;
+	line-height: 1.25;
+}
+
+#contact a::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: var(--primary-color);
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+#contact a:hover::before {
+	width: 100%;
+}
+
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  body {
+    font-size: 24px;
+  }
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 90%;
+    margin: 0 5%;
+  }
+  header .logo-wrapper {
+    max-width: 150px;
+    padding: 1rem 2rem;
+  }
+  header nav {
+    display: block;
+    flex-grow: 1;
+    width: 35%;
+  }
+  header nav li::before {
+    display: none;
+  }
+  header nav a {
+    color: var(--secondary-color);
+    font-family: 'Brenat Demo', sans-serif;
+    text-decoration: none;
+    margin-top: 3rem;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #hero .hero-content {
+    position: static;
+    text-align: center;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  #hero h1 {
+    font-size: 4.5rem;
+  }
+  
+  #hero .search-bar {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 90%;
+    left: 5%;
+  }
+  #hero .search-bar label {
+    display: none;
+  }
+  #hero .search-bar .autocomplete-container {
+    flex-grow: 1;
+  }
+  #hero .search-bar input {
+    margin-top: 0;
+    height: 50px;
+  }
+  #hero .search-bar button {
+    margin: 0;
+  }
+  
+  #about .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+  #about .about-image {
+    max-width: 50%;
+    margin-left: 2.5rem;
+  }
+  #about .about-image p {
+    font-size: 2rem;
+  }
+  #about .about-content {
+    max-width: 50%;
+  }
+
+  #election-day {
+    max-width: 80%;
+    margin: -6rem auto 4rem;
+  }
+
+  #mission {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+  }
+  #mission h2 {
+    font-size: 22rem;
+    line-height: 1;
+  }
+  #mission h3 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: -3rem;
+  }
+  #mission p {
+    text-align: left;
+  }
+
+  #faqs ul {
+    max-width: 1200px;
+    margin: 1rem auto;
+    display: block;
+  }
+  #faqs .faq-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  #contact h3 {
+    font-size: 2rem;
+  }
+  #contact a {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1360px) {
+  header {
+    max-width: 1200px;
+    margin: 0 calc((100% - 1200px) / 2);
+  }
+  #hero .search-bar {
+    max-width: 1200px;
+    left: calc((100% - 1200px) / 2);
+  }
+  #about .about-image {
+    margin-right: -5rem;
+  }
+  #election-day {
+    max-width: 1000px;
+    margin: -6rem auto 4rem;
+  }
 }
