@@ -204,3 +204,72 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(counter);
+
+// Map
+const customMapStyle = [
+  {
+    "featureType": "landscape",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffb8b8"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffb8b8"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ededed"
+      }
+    ]
+  }
+];
+
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 41.1228, lng: -74.0960 },
+    zoom: 13,
+    styles: customMapStyle,
+  });
+
+  const outline = new google.maps.Polygon({
+    paths: coords.map(coord => new google.maps.LatLng(coord[1], coord[0])),
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 3,
+    fillColor: '#FF0000',
+    fillOpacity: 0.2,
+  });
+
+  outline.setMap(map);
+}
+initMap();
