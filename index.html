@@ -43,11 +43,13 @@
         <h1>When disaster strikes, <br><span>every second</span> counts.</span></h1>
         <h1>On <a href="#">December 9,</a> <br>make <span>your vote</span> count!</h1>
         <div class="search-bar">
-          <!-- <label>Check if you're located in Tallman</label> -->
-          <div class="autocomplete-container">
-            <input type="text" id="address" placeholder="Check if you're located in Tallman Fire District. Start typing adderss....">
+          <div class="search-bar-content"><!-- <label>Check if you're located in Tallman</label> -->
+            <div class="autocomplete-container">
+              <input type="text" id="address" placeholder="Check if you're address is in Tallman Fire District. Start typing adderss....">
+            </div>
+            <button onclick="handleSubmit()">Search</button>
           </div>
-          <button onclick="handleSubmit()">Search</button>
+          <div id="result"></div>
         </div>
       </div>
     </section>
