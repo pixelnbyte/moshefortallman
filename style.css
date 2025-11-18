@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Brenat Demo', sans-serif;
+  font-family: 'Brenat', sans-serif;
   font-weight: 700;
   color: var(--secondary-color);
 }
@@ -415,7 +415,7 @@ div#result ul a {
   }
   header nav a {
     color: var(--secondary-color);
-    font-family: 'Brenat Demo', sans-serif;
+    font-family: 'Brenat', sans-serif;
     text-decoration: none;
     margin-top: 3rem;
   }
