@@ -470,7 +470,7 @@ div#result ul a {
   #hero .search-bar #result ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   #hero .search-bar-content {
     width: 100%;

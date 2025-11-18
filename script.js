@@ -110,7 +110,7 @@ const coords = [
     inside ? '<p>You\'re located within Tallman Fire District.</p> <ul>\
     <li><a href="https://voterlookup.elections.ny.gov" target="_blank">Registration Status</a></li> \
     <li><a href="https://elections.ny.gov/voter-registration-process" target="_blank">Register to vote</a></li> \
-    <li><a href="https://chat.whatsapp.com/CV7rMftauLY3JrCOF6I8o9" target="_blank">Whatsapp Community</a></li></ul>' : '<p>You\'re outside the district. Your support is still appreciated.</p>';
+    <li><a href="#" class="clear-search" target="_blank">Search a different address</a></li></ul>' : '<p>You\'re outside the district. Your support is still appreciated.</p>';
     // Log the address
     document.getElementsByClassName('search-bar-content')[0].style.display = 'none';
   // Log the address
@@ -151,7 +151,7 @@ function checkAddress() {
       inside ? '<p>You\'re located within Tallman Fire District.</p> <ul>\
       <li><a href="https://voterlookup.elections.ny.gov" target="_blank">Registration Status</a></li> \
       <li><a href="https://elections.ny.gov/voter-registration-process" target="_blank">Register to vote</a></li> \
-      <li><a href="https://chat.whatsapp.com/CV7rMftauLY3JrCOF6I8o9" target="_blank">Whatsapp Community</a></li></ul>' : '<p>You\'re outside the district. Your support is still appreciated.</p>';
+      <li><a href="#" class="clear-search" target="_blank">Search a different address</a></li></ul>' : '<p>You\'re outside the district. Your support is still appreciated.</p>';
       // Log the address
       document.getElementsByClassName('search-bar-content')[0].style.display = 'none';
       logSubmission(address, inside);
@@ -179,6 +179,20 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.toggle('active');
     });
   });
+});
+
+// Handle "clear search" button click to show search-bar-content and clear result
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('clear-search')) {
+    e.preventDefault();
+    // Show the search bar content
+    document.getElementsByClassName('search-bar-content')[0].style.display = '';
+    // Clear result box
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('result').style.display = 'none';
+    // Optionally clear the address input
+    document.getElementById('address').value = '';
+  }
 });
 
 
