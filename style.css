@@ -234,6 +234,10 @@ div#result ul a {
   flex-grow: 1;
   min-width: calc(50% - 17px);
 }
+#election-day li a {
+  color: inherit;
+  text-decoration: none;
+}
 #election-day li::before {
   display: none;
 }
